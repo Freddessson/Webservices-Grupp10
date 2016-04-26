@@ -9,7 +9,7 @@ namespace WebService
     /// <summary>
     /// Summary description for WebService
     /// </summary>
-    [WebService(Namespace = "http://tempuri.org/")]
+    [WebService(Namespace = "http://grupp10/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
@@ -21,6 +21,13 @@ namespace WebService
         public string HelloWorld()
         {
             return "Hello World";
+        }
+
+        [WebMethod]
+        public string GetContent(string filename)
+        {
+            string content = System.IO.File.ReadAllText(@"C:\Users\OttoF\Desktop\" + filename);
+            return content;
         }
     }
 }
