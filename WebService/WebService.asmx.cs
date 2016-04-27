@@ -26,8 +26,26 @@ namespace WebService
         [WebMethod]
         public string GetContent(string filename)
         {
+            try
+            {
             string content = System.IO.File.ReadAllText(@"C:\Users\OttoF\Desktop\" + filename);
-            return content;
+            if (content != null)
+            {
+                return content;
+            }
+            else
+            {
+                string message = "The File was empty, or we could not find it.";
+                return message;
+            }
+            }
+            catch (System.IO.FileNotFoundException e)
+            {
+
+                throw e;
+                Console.WriteLine(e.Message);
+            }
+
         }
     }
 }
