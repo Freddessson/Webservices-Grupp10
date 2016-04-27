@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using DAL;
 
 namespace WebService
 {
@@ -28,16 +30,16 @@ namespace WebService
         {
             try
             {
-            string content = System.IO.File.ReadAllText(@"C:\Users\OttoF\Desktop\" + filename);
-            if (content != null)
-            {
-                return content;
-            }
-            else
-            {
-                string message = "The File was empty, or we could not find it.";
-                return message;
-            }
+                string content = System.IO.File.ReadAllText(@"C:\Users\OttoF\Desktop\" + filename);
+                if (content != null)
+                {
+                    return content;
+                }
+                else
+                {
+                    string message = "The File was empty, or we could not find it.";
+                    return message;
+                }
             }
             catch (System.IO.FileNotFoundException e)
             {
@@ -46,6 +48,13 @@ namespace WebService
                 Console.WriteLine(e.Message);
             }
 
+        }
+        [WebMethod]
+        public List<Customer> FindAllCustomers()
+        {
+            List<Customer> customerList = new List<Customer>();
+            customerList = CobraCustomer.FindAllCustomers();
+            return customerList;
         }
     }
 }

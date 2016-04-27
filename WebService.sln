@@ -10,6 +10,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consuming", "..\Consuming\C
 		{F922EA3A-710F-46F9-ADFA-D733EDAF528A} = {F922EA3A-710F-46F9-ADFA-D733EDAF528A}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{BBEAB224-F400-49F4-AD46-52F028ACE705}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{732A17AC-3DE9-44E0-A3F6-DB7F7DFF873B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +28,14 @@ Global
 		{F15376AC-51E0-47B4-8D64-1584A6E02E40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F15376AC-51E0-47B4-8D64-1584A6E02E40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F15376AC-51E0-47B4-8D64-1584A6E02E40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBEAB224-F400-49F4-AD46-52F028ACE705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBEAB224-F400-49F4-AD46-52F028ACE705}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBEAB224-F400-49F4-AD46-52F028ACE705}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBEAB224-F400-49F4-AD46-52F028ACE705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{732A17AC-3DE9-44E0-A3F6-DB7F7DFF873B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{732A17AC-3DE9-44E0-A3F6-DB7F7DFF873B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{732A17AC-3DE9-44E0-A3F6-DB7F7DFF873B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{732A17AC-3DE9-44E0-A3F6-DB7F7DFF873B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
