@@ -41,11 +41,13 @@ namespace WebService
                     return message;
                 }
             }
-            catch (System.IO.FileNotFoundException e)
+            catch (Exception e)
             {
 
-                throw e;
-                Console.WriteLine(e.Message);
+
+                string message = "Choose a file!";
+                return message;
+
             }
 
         }
@@ -54,7 +56,16 @@ namespace WebService
         {
             List<Customer> customerList = new List<Customer>();
             customerList = CobraCustomer.FindAllCustomers();
+
             return customerList;
+        }
+
+        [WebMethod]
+        public List<List<string>> GetCronusEmployees()
+        {
+            List<List<string>> columnData = new List<List<string>>();
+            columnData = CronusDAL.GetCronusEmployees();
+            return columnData;
         }
     }
 }
