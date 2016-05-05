@@ -67,5 +67,19 @@ namespace WebService
             columnData = CronusDAL.GetCronusEmployees();
             return columnData;
         }
+        [WebMethod]
+        public List<List<string>> GetCronusMetadata()
+        {
+            List<List<string>> columnData = new List<List<string>>();
+            columnData = CronusDAL.GetCronusMetadata();
+            return columnData;
+        }
+        [WebMethod]
+        public List<List<string>> GetCronus(string parameter)
+        {
+            List<List<string>> columnData = new List<List<string>>();
+            columnData = CronusDAL.GetCronus(parameter);
+            return columnData;
+        }
     }
 }
