@@ -81,5 +81,26 @@ namespace WebService
             columnData = CronusDAL.GetCronus(parameter);
             return columnData;
         }
+        [WebMethod]
+        public void CreateEmployee(string NO_, string FN, string LN, string JT)
+        {
+            CronusDAL.CreateEmployee(NO_, FN, LN, JT);
+        }
+        [WebMethod]
+        public List<List<string>> GetAllEmployees()
+        {
+            return CronusDAL.GetAllEmployees();
+        }
+        [WebMethod]
+        public void UpdateEmployee(string NO_, string FN, string LN, string JT)
+        {
+            CronusDAL.UpdateEmployee(NO_, FN, LN, JT);
+        }
+        [WebMethod]
+        public void DeleteEmployee(string NO_)
+        {
+            CronusDAL.DeleteEmployee(NO_);
+        }
+
     }
 }
